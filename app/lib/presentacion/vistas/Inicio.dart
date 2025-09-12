@@ -6,9 +6,23 @@ class Inicio extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: ,
+     body: Stack(
+     fit: StackFit.expand,
+     children: [
+     Image.asset(
+      "assets/personaje01.gif",
+      fit: BoxFit.cover,
+    ),
+    Center(
+      child: ElevatedButton(
+        onPressed: () {
+          print("boton presionado");
+        },
+        child: Text("¡Comenzar!"),
       ),
+    ),
+  ],
+),
     );
   }
 }
