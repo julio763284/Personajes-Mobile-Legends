@@ -39,7 +39,7 @@ class InfoGranger extends StatelessWidget {
             SizedBox(height: 40.0,),
             Container(
               width: 450.0,
-              height: 250.0,
+              height: 200.0,
               decoration: BoxDecoration(
                 border: Border.all(
                   color: Colors.black,

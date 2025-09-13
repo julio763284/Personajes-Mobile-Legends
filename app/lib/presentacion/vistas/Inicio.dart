@@ -1,4 +1,7 @@
+import 'package:app/presentacion/bloc/event.dart';
 import 'package:flutter/material.dart';
+import 'package:app/presentacion/bloc/bloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class Inicio extends StatelessWidget {
   const Inicio({super.key});
@@ -16,7 +19,7 @@ class Inicio extends StatelessWidget {
     Center(
       child: ElevatedButton(
         onPressed: () {
-          print("boton presionado");
+          context.read<LogicaApp>().add(Iniciarapp());
         },
         child: Text("¡Comenzar!"),
       ),
