@@ -9,23 +9,40 @@ class Inicio extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     body: Stack(
-     fit: StackFit.expand,
-     children: [
-     Image.asset(
-      "assets/personaje01.gif",
-      fit: BoxFit.cover,
-    ),
-    Center(
-      child: ElevatedButton(
-        onPressed: () {
-          context.read<LogicaApp>().add(Iniciarapp());
-        },
-        child: Text("¡Comenzar!"),
-      ),
-    ),
-  ],
-),
+     body: Center(
+       child: Container(
+        height: double.infinity,
+        width: double.infinity,
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/FondoInicialredimensionado.jpg"),
+            fit: BoxFit.cover)
+        ),
+         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+           children: [
+              SizedBox(height: 500.0),
+              ElevatedButton(
+                    onPressed: () {
+                      context.read<LogicaApp>().add(Iniciarapp());
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blueAccent,
+                      padding: EdgeInsets.all(10.0),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(40.0)),
+                        elevation: 6,
+                        textStyle: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                         ),
+                    ),
+                    child: Text("¡Jugar!", style: TextStyle(color: Colors.black),),
+                ),
+           ],
+         ),
+       ),
+     ),
     );
   }
 }
