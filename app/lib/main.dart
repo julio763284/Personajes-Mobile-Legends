@@ -1,4 +1,5 @@
 import 'package:app/presentacion/bloc/bloc.dart';
+import 'package:app/presentacion/bloc/event.dart';
 import 'package:app/presentacion/bloc/state.dart';
 import 'package:app/presentacion/vistas/Inicio.dart';
 import 'package:app/presentacion/vistas/Loading.dart';
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => LogicaApp(),
+      create: (context) => LogicaApp()..add(Iniciarapp()),
       child: MaterialApp(
         home: BlocBuilder<LogicaApp, AppStates>(
           builder: (context, state) {
